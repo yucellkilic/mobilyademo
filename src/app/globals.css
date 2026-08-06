@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #070708;
+    --bg-secondary: #0d0e10;
+    --bg-surface: #141519;
+    --text-primary: #f4f1ea;
+    --text-secondary: #b8b3aa;
+    --text-muted: #85827c;
+    --accent-champagne: #c9a875;
+    --accent-champagne-light: #e6c896;
+    --accent-bronze: #8b6841;
+    --glass-bg: rgba(255, 255, 255, 0.045);
+    --glass-bg-hover: rgba(255, 255, 255, 0.08);
+    --glass-dark: rgba(8, 9, 11, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-border-warm: rgba(201, 168, 117, 0.28);
+    --watermark-opacity: 0.04;
+  }
+
+  html {
+    background-color: #000000;
+    color: var(--text-primary);
+    font-family: var(--font-manrope), system-ui, sans-serif;
+  }
+
+  body {
+    background-color: transparent;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070708;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #202228;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a875;
+}
+
+/* Liquid Glass Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.065);
+  border-color: rgba(201, 168, 117, 0.35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 25px rgba(201, 168, 117, 0.1);
+}
+
+.glass-chip {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Blueprint / Architectural Grid Overlay - DISABLED */
+.blueprint-grid {
+  background-size: 60px 60px;
+  background-image: none;
+}
+
+.blueprint-grid-fine {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Watermark Typography */
+.watermark-text {
+  color: rgba(244, 241, 234, 0.04);
+  user-select: none;
+  pointer-events: none;
+  font-family: var(--font-instrument-serif), serif;
+}
+
+/* Serif Headings */
+.font-serif-editorial {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+}
+
+/* Soft Product Shadow */
+.product-shadow {
+  filter: drop-shadow(0 30px 45px rgba(0, 0, 0, 0.75));
+}
