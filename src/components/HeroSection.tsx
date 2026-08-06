@@ -25,12 +25,7 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-[100svh] w-full flex items-center justify-center pb-16 pt-20 md:pt-0 overflow-hidden blueprint-grid"
     >
-      {/* Background Giant Watermark Typography */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-        <span className="watermark-text text-[22vw] md:text-[25vw] font-normal leading-none tracking-tighter opacity-100">
-          VELORA
-        </span>
-      </div>
+      {/* Background Giant Watermark Typography - REMOVED */}
 
       {/* Bottom measurement line */}
       <div className="absolute bottom-16 right-8 md:right-16 hidden md:flex items-center gap-4 text-[10px] font-mono tracking-widest text-[#85827C]/50 pointer-events-none z-10">
