@@ -41,14 +41,14 @@ export default function GlobalBackground() {
         await loadScript(
           "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
         );
-        // Then load Vanta FOG
+        // Then load Vanta WAVES
         await loadScript(
-          "https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.fog.min.js"
+          "https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"
         );
 
         if (cancelled || !mountRef.current || vantaEffect.current) return;
 
-        vantaEffect.current = window.VANTA.FOG({
+        vantaEffect.current = window.VANTA.WAVES({
           el: mountRef.current,
           THREE: window.THREE,
           mouseControls: true,
@@ -56,13 +56,13 @@ export default function GlobalBackground() {
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          highlightColor: 0x1f1100,
-          midtoneColor: 0x464040,
-          lowlightColor: 0x0e4e4f,
-          baseColor: 0x0,
-          blurFactor: 0.6,
-          speed: 1.0,
-          zoom: 1.2,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x0,
+          shininess: 51.0,
+          waveHeight: 18.0,
+          waveSpeed: 1.0,
+          zoom: 1.0,
         });
       } catch (e) {
         console.error("Vanta FOG load error:", e);
